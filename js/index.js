@@ -42,6 +42,8 @@ document.getElementById('save-button').addEventListener('click',function(){
     document.getElementById('saving-ammount').innerText=savingAmmount;
     document.getElementById('remain-balance').innerText=remainingBalance;
 
+    
+
 
 
 
