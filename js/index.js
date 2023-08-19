@@ -22,3 +22,27 @@ function getInputValue(inputId){
     inputField.value='';
     return value;
 }
+
+document.getElementById('save-button').addEventListener('click',function(){
+    const savePercent=getInputValue('save');
+    const totalIncome=getInputValue('total-income');
+   
+
+
+    const foodCost=getInputValue('food');
+    const rentCost=getInputValue('rent');
+    const clothCost=getInputValue('cloth')
+   
+    const totalCost=foodCost+rentCost+clothCost;
+    const balance= totalIncome-totalCost;
+    
+    const savingAmmount=(totalIncome*savePercent)/100;
+    const remainingBalance=balance-savingAmmount;
+
+    document.getElementById('saving-ammount').innerText=savingAmmount;
+    document.getElementById('remain-balance').innerText=remainingBalance;
+
+
+
+
+})
