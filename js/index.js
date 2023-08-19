@@ -19,19 +19,24 @@ document.getElementById('calc-btn').addEventListener('click',function(){
 function getInputValue(inputId){
     const inputField=document.getElementById(inputId);
     const value=parseFloat(inputField.value);
-    inputField.value='';
+   
     return value;
 }
 
 document.getElementById('save-button').addEventListener('click',function(){
     const savePercent=getInputValue('save');
     const totalIncome=getInputValue('total-income');
-   
-
 
     const foodCost=getInputValue('food');
     const rentCost=getInputValue('rent');
     const clothCost=getInputValue('cloth')
+   
+    if(isNaN(totalIncome)||isNaN(foodCost)||isNaN(rentCost)||isNaN(clothCost)||isNaN(savePercent)){
+        alert('plese enter number value')
+        return;
+     }
+
+   
    
     const totalCost=foodCost+rentCost+clothCost;
     const balance= totalIncome-totalCost;
@@ -42,7 +47,7 @@ document.getElementById('save-button').addEventListener('click',function(){
     document.getElementById('saving-ammount').innerText=savingAmmount;
     document.getElementById('remain-balance').innerText=remainingBalance;
 
-    
+
 
 
 
