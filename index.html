@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+   <section class="w-9/12 mx-auto mt-12 border-2 border-gray-400">
+        <h1 class="text-[#31A5AC] pt-4 text-center text-4xl font-semibold pb-10">Money Master💰 </h1>
+        <div class="flex gap-[73px] pl-[65px] pb-[75px]">
+              <div>
+                    <img src="money.png" alt="">
+              </div>
+
+              <div class="bg-gray-200 p-12">
+                    <h1 class="text-center font-semibold block mb-6">Income</h1>
+                   <div class="ml-4">
+                    <p class="inline mr-1">Income:</p>
+                    <input id="total-income" class="border-2 mx-auto  border-black" type="text">
+                   </div>
+
+                    <h1 class="text-center font-semibold block my-4">Expenses</h1>
+                    <div class="ml-8 mb-2">
+                        <p class="inline mr-1">Food:</p>
+                    <input id="food" class="border-2  border-black" type="text ">
+                    </div>
+                    <div class="ml-8 mb-2">
+                        <p class="inline mr-1">Rent:</p>
+                    <input id="rent" class="border-2  border-black " type="text">
+                    </div>
+                   <div class="ml-3 mb-2">
+                    <p class="inline mr-1">Clothes:</p>
+                    <input id="cloth" class="border-2  border-black" type="text">
+                   </div>
+                    <button id="calc-btn" class="w-6/12 ml-20 p-2 rounded-lg my-4 hover:bg-blue-200 bg-[#31A5AC]">Calculate</button>
+
+                    <h1 class="text-center font-semibold ">Total Expenses:<span id="total-cost">00</span></h1>
+                    <h1  class="text-center font-semibold">Balance:<span id="total-balance">00</span> </h1>
+
+              </div>
+        </div>
+   </section>
+   <script src="js/index.js"></script>
+</body>
+</html>
